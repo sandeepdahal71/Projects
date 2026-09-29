@@ -1,0 +1,1 @@
+package chess; public abstract class Piece { public enum Color{WHITE,BLACK} protected final Color color; public Piece(Color c){color=c;} public Color color(){return color;} public abstract boolean canMove(Position a,Position b,Board board); }

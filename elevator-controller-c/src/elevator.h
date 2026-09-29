@@ -1,0 +1,2 @@
+#pragma once
+typedef enum{OFF,IDLE,FLOOR2,FLOOR3,FLOOR4,MOVING_UP,MOVING_DOWN,STOPPED,DOOR_OPENING,DOOR_OPEN,DOOR_CLOSING,DOOR_CLOSED,DOOR_OBSTRUCTED}State;typedef enum{POWER_ON,CALL_2,CALL_3,CALL_4,CAB_2,CAB_3,CAB_4,DOOR_IS_OPEN,DOOR_IS_CLOSED,DOOR_IS_OBSTRUCTED,RETRY_OPEN,TIMER}Event;typedef struct{State state;int current,target;}Elevator;void elevator_init(Elevator*);void elevator_event(Elevator*,Event);const char*state_name(State);
